@@ -1,0 +1,2 @@
+# pltChinesize
+一键解决matplotlib.pyplot和sns不支持中文的问题
