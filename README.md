@@ -1,5 +1,7 @@
 # pltChinesize
-一键解决matplotlib.pyplot和sns不支持中文的问题，主要针对mac和linux服务器，windows不清楚
+一键解决matplotlib.pyplot和sns不支持中文的问题，主要针对mac和linux服务器
+
+windows可以直接使用`plt.rcParams['font.family'] = 'simhei'`
 
 ## 使用方法
 点击下载压缩包或者
