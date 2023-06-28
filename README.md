@@ -21,7 +21,7 @@ python main.py
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
-plt.rcParams['font.family'] = 'simhei'
+plt.rcParams['font.family'] = 'simhei'  # 这里可以替换
 plt.rcParams['axes.unicode_minus'] = False
 
 a = np.array([5, 20, 15, 25, 10])
@@ -34,7 +34,7 @@ plt.save('test.jpg')
 
 ## 其他
 
-默认会把字体安装到当前python环境的matplotlib库的字体文件夹，如果运行时增加一个参数1，就会把字体安装到系统字体文件夹，其他软件也能用。
+默认会把字体安装到当前python环境的matplotlib库的字体文件夹，如果运行时增加一个参数1，就会把字体安装到系统字体文件夹。
 ```
 python main.py 1
 ```
