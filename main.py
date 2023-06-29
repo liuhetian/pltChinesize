@@ -1,6 +1,6 @@
 import os, glob, matplotlib, sys
 from matplotlib.font_manager import FontManager
-if 'alluser' in sys.argv:
+if 'all_users' in sys.argv:
     folder_name = '/usr/share/fonts' 
 else:
     folder_name = os.path.join(matplotlib.get_data_path(), 'fonts/ttf')
