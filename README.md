@@ -29,7 +29,7 @@ b = np.array([10, 15, 20, 15, 5])
 plt.barh(range(len(a)), a)
 plt.barh(range(len(b)), -b)
 plt.title('你好')
-plt.save('test.jpg')
+plt.savefig('test.jpg')
 ```
 
 ## 其他
