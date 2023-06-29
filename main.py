@@ -1,23 +1,20 @@
 import os, glob, matplotlib, sys
 from matplotlib.font_manager import FontManager
-if len(sys.argv) > 1 and sys.argv[1] == 1:
-    all_user = True  
+if 'alluser' in sys.argv:
+    folder_name = '/usr/share/fonts' 
 else:
-    all_user = False
-    
-if all_user:
-    folder_name = '/usr/share/fonts'
-else:
-    
-    font_manager = FontManager()
-    folder_name = os.path.dirname(next(iter(font_manager.ttflist)).fname)
-    #set(os.path.dirname(i.fname) for i in font_manager.ttflist)
-ttf = glob.glob('*.ttf')[0]
+    folder_name = os.path.join(matplotlib.get_data_path(), 'fonts/ttf')
+
+ttf_files = glob.glob('*.ttf')
+if not ttf_files:
+    raise ValueError('本目录下没有ttf文件')
+ttf = ttf_files[0]
 os.system(f'mv { ttf } { folder_name } && fc-cache -f -v>/etc/null')
-# fc-list
+# fc-list 命令可以查看系统字体文件夹中安装的所有字体
 cache = matplotlib.get_cachedir()
 os.system(f'rm -rf { cache }')
 
+# 找到刚安装的字体的名字（不是文件名）
 font_manager = FontManager()
 for font in font_manager.ttflist:
     if ttf in font.fname:
