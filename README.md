@@ -8,14 +8,13 @@ windows可以直接使用`plt.rcParams['font.family'] = 'simhei'`
 ```
 git clone https://github.com/liuhetian/pltChinesize.git
 ```
-之后开始运行，脚本会安装同路径下的一个ttf文件，安装完后会输出字体的名字，之后需要用这个字体名字来调用该字体。
-
-自带了微软雅黑字体，也可以自己下载字体放在一起然后运行。
+之后开始运行，脚本会安装同路径下的一个ttf文件，这里会安装`simhei`。
 ```shell
 cd pltChinesize
 python main.py
 ```
-会输出一串字符，这个字符就是字体的名字。
+
+也可以自己下载字体放在本目录再次运行，安装完后会输出字体的名字，之后需要用这个字体名字来调用该字体。
 
 ## 测试是否成功
 ```python
