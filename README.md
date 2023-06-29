@@ -34,7 +34,7 @@ plt.save('test.jpg')
 
 ## 其他
 
-默认会把字体安装到当前python环境的matplotlib库的字体文件夹，如果运行时增加一个参数1，就会把字体安装到系统字体文件夹。
+默认会把字体安装到当前python环境的matplotlib库的字体文件夹，如果运行时增加一个参数`all_users`，就会把字体安装到系统字体文件夹。
 ```
-python main.py 1
+python main.py all_users
 ```
